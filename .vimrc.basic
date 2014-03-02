@@ -1,0 +1,12 @@
+let mapleader = ","               " キーマップリーダ
+set textwidth=0                 " 一行に長い文章を書いていても自動折り返しをしない
+set backupdir=~/.vim/tmp        " バックアップファイルの場所を変更
+set directory=~/.vim/tmp        " 一時ファイルの場所を変更
+set title                       " タイトルの表示
+" OSのクリップボードを使う
+set clipboard+=unnamed
+
+" ファイルタイプ判定をon
+filetype plugin on
+
+

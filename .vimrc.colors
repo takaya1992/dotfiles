@@ -1,0 +1,11 @@
+" カラースキームの設定
+
+set t_Co=256
+
+set background=dark
+let g:solarized_visibility = "high"
+let g:solarized_contrast = "high"
+let g:solarized_termtrans=1
+colorscheme solarized
+
+
