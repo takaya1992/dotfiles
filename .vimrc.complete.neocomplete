@@ -86,3 +86,4 @@ endif
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
 
+let g:neocomplete#enable_insert_char_pre = 1
