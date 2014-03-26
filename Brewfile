@@ -29,15 +29,15 @@ install --powerline --vim-powerline ricty
 tap phinze/homebrew-cask
 install brew-cask
 
-cask install firefox
-cask install github
-cask install iterm2
-cask install sourcetree
-cask install mou
-cask install vagrant
-cask install virtualbox
-cask install keyremap4macbook
-cask install android-studio
+#cask install firefox
+#cask install github
+#cask install iterm2
+#cask install sourcetree
+#cask install mou
+#cask install vagrant
+#cask install virtualbox
+#cask install keyremap4macbook
+#cask install android-studio
 
 # Remove outdated versions from the cellar
 cleanup
