@@ -31,9 +31,9 @@ install brew-cask
 
 #cask install firefox
 #cask install github
-#cask install iterm2
+cask install iterm2
 #cask install sourcetree
-#cask install mou
+cask install mou
 #cask install vagrant
 #cask install virtualbox
 #cask install keyremap4macbook
