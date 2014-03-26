@@ -22,6 +22,7 @@ install readline
 install phpenv
 install node
 install nginx
+install ag
 
 tap sanemat/font
 install --powerline --vim-powerline ricty
