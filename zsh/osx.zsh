@@ -1,5 +1,5 @@
 vimpath=`brew --prefix macvim-kaoriya`/MacVim.App/Contents/MacOS/Vim
-export EDITOR=vimpath
+export EDITOR=$vimpath
 alias vi='env LANG=ja_JP.UTF-8 $vimpath "$@"'
 alias vim='env LANG=ja_JP.UTF-8 $vimpath "$@"'
 
