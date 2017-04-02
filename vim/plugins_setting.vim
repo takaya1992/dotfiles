@@ -1,11 +1,3 @@
-" PDV--phpDocumentor-for-Vim の設定
-inoremap <Leader>p <ESC>:call PhpDocSingle()<CR>i 
-nnoremap <Leader>d :call PhpDocSingle()<CR> 
-vnoremap <Leader>d :call PhpDocRange()<CR> 
-
-
-
-
 " Plugin Config
 " NERDTree
 nmap <silent> <C-e>      :NERDTreeToggle<CR>
@@ -15,27 +7,14 @@ imap <silent> <C-e> <Esc>:NERDTreeToggle<CR>
 cmap <silent> <C-e> <C-u>:NERDTreeToggle<CR>
 autocmd vimenter * if !argc() | NERDTree | endif
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeIgnore=['\.clean$', '\.swp$', '\.bak$', '\~$']
 let g:NERDTreeShowHidden=1
 let g:NERDTreeMinimalUI=1
 let g:NERDTreeDirArrows=0
 let g:NERDTreeMouseMode=2
-
-
-" tmux利用時のクリップボード
-" 'kana/vim-fakeclip.git'
-set clipboard+=unnamed
-set clipboard+=autoselect
-
-" Tagbar
-nmap <F8> :TagbarToggle<CR>
-
-" Taglist
-"let Tlist_Ctags_Cmd = "/usr/local/bin/ctags"  " ctagsのコマンド
-"let Tlist_Show_One_File = 1                   " 現在表示中のファイルのみのタグしか表示しない
-"let Tlist_Use_Right_Window = 1                " 右側にtag listのウインドうを表示する
-"let Tlist_Exit_OnlyWindow = 1                 " taglistのウインドウだけならVimを閉じる
-"nmap <silent> ,t :TlistToggle<CR>       " ,tでtaglistウインドウを開いたり閉じたり出来るショートカット
+nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 
 " ctrlp
@@ -48,7 +27,7 @@ let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:9'
 " The prefix key.
 nnoremap    [unite]   <Nop>
 nmap    <Leader>f [unite]
- 
+
 " unite.vim keymap
 " https://github.com/alwei/dotfiles/blob/3760650625663f3b08f24bc75762ec843ca7e112/.vimrc
 nnoremap [unite]u  :<C-u>Unite -no-split<Space>
@@ -60,13 +39,9 @@ nnoremap <silent> ,vr :UniteResume<CR>
 
 " vinarise
 let g:vinarise_enable_auto_detect = 1
- 
+
 " unite-build map
 nnoremap <silent> ,vb :Unite build<CR>
 nnoremap <silent> ,vcb :Unite build:!<CR>
 nnoremap <silent> ,vch :UniteBuildClearHighlight<CR>
 "" }}}
-
-
-
-

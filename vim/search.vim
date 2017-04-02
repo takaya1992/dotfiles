@@ -8,5 +8,3 @@ set wrapscan   "検索をファイルの先頭へループする
 
 "Escの2回押しでハイライト消去
 nmap <ESC><ESC> :nohlsearch<CR><ESC>
-
-

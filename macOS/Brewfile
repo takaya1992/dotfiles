@@ -1,0 +1,27 @@
+# Install zsh
+brew 'zsh'
+
+brew 'wget'
+brew 'openssl'
+brew 'git'
+brew 'git-flow'
+brew 'tig'
+brew 'tree'
+brew 'jq'
+brew 'plenv'
+brew 'rbenv'
+brew 'readline'
+brew 'ag'
+brew 'pt'
+brew 'tmux'
+brew 'peco'
+
+# vim
+tap 'universal-ctags/universal-ctags'
+brew 'universal-ctags', args: ['HEAD']
+tap 'splhack/splhack'
+brew 'cmigemo-mk', args: ['HEAD']
+brew 'macvim-kaoriya', args: ['HEAD']
+
+tap 'sanemat/font'
+brew 'ricty', args: ['powerline', 'vim-powerline']

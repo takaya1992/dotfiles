@@ -1,0 +1,57 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'Shougo/context_filetype.vim'
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+[[plugins]]
+repo = 'altercation/vim-colors-solarized'
+
+[[plugins]]
+repo = 'scrooloose/syntastic'
+
+[[plugins]]
+repo = 'errormarker.vim'
+
+# ファイル検索
+[[plugins]]
+repo = 'kien/ctrlp.vim'
+
+
+# ローカル設定読み込み
+[[plugins]]
+repo = 'thinca/vim-localrc'
+
+# カッコ系
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# コメントアウト
+[[plugins]]
+repo = 'sakuraiyuta/commentout.vim'
+
+# Git系
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+
+# HTML
+[[plugins]]
+repo = 'mattn/emmet-vim'
+
+# Perl
+[[plugins]]
+repo = 'moznion/vim-cpanfile'
+[[plugins]]
+repo = 'moznion/syntastic-cpanfile'
+[[plugins]]
+repo = 'y-uuki/perl-local-lib-path.vim'

@@ -10,16 +10,17 @@
 "inoremap " ""<LEFT>
 "inoremap ' ''<LEFT>
 
-
+noremap ;  :
+noremap :  ;
 
 " Perl
 au BufNewFile,BufRead cpanfile set filetype=cpanfile
 au BufNewFile,BufRead cpanfile set syntax=perl.cpanfile
 au BufReadPost,BufNewFile *.t :setl filetype=perl
 " autocmd BufNewFile,BufRead *.t nnoremap <F5> :!carton exec -- prove -Ilib %<CR>
- 
+
 autocmd FileType perl PerlLocalLibPath
- 
+
 autocmd BufWinEnter,BufNewFile *.t set filetype=perl.unit
 let g:quickrun_config = {}
 let g:quickrun_config = {
@@ -29,7 +30,7 @@ let g:quickrun_config = {
 \       "outputter/buffer/into": 1,
 \   },
 \}
- 
+
 let g:quickrun_config['perl/carton'] = {
 \   'cmdopt': '-Ilib',
 \   'hook/cd/directory': '%{fnamemodify(finddir(".git", ".;"), ":h")}',
