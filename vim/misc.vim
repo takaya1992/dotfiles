@@ -4,14 +4,15 @@
 "inoremap <C-I> <ESC>I
 "inoremap <C-A> <ESC>A
 
-"inoremap { {}<LEFT>
-"inoremap [ []<LEFT>
-"inoremap ( ()<LEFT>
-"inoremap " ""<LEFT>
-"inoremap ' ''<LEFT>
+inoremap { {}<LEFT>
+inoremap [ []<LEFT>
+inoremap ( ()<LEFT>
+inoremap " ""<LEFT>
+inoremap ' ''<LEFT>
 
 noremap ;  :
 noremap :  ;
+nnoremap <ESC><ESC>:nohlsearch<CR>
 
 " Perl
 au BufNewFile,BufRead cpanfile set filetype=cpanfile

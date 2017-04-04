@@ -16,6 +16,12 @@ brew 'pt'
 brew 'tmux'
 brew 'peco'
 
+# for nokogiri
+tap 'homebrew/dupes'
+brew 'libxml2'
+brew 'libxslt'
+brew 'libiconv'
+
 # vim
 tap 'universal-ctags/universal-ctags'
 brew 'universal-ctags', args: ['HEAD']
