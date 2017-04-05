@@ -12,7 +12,6 @@ inoremap ' ''<LEFT>
 
 noremap ;  :
 noremap :  ;
-nnoremap <ESC><ESC>:nohlsearch<CR>
 
 " Perl
 au BufNewFile,BufRead cpanfile set filetype=cpanfile
