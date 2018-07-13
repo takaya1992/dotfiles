@@ -12,6 +12,7 @@
 - [Google 日本語入力](https://dl.google.com/japanese-ime/latest/GoogleJapaneseInput.dmg)
 - [英かな](https://ei-kana.appspot.com/)
 - [SandS](https://github.com/ToQoz/SandS)
+- [iTerm2](https://www.iterm2.com/)
 - [Docker](https://www.docker.com/get-docker)
 - [Dash](https://kapeli.com/dash)
 - [Atom](https://atom.io/)
