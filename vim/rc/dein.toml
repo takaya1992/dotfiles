@@ -19,7 +19,7 @@ repo = 'altercation/vim-colors-solarized'
 repo = 'scrooloose/syntastic'
 
 [[plugins]]
-repo = 'errormarker.vim'
+repo = 'vim-scripts/errormarker.vim'
 
 # ファイル検索
 [[plugins]]
@@ -47,6 +47,19 @@ repo = 'airblade/vim-gitgutter'
 # HTML
 [[plugins]]
 repo = 'mattn/emmet-vim'
+
+# CSS
+[[plugins]]
+repo = 'cakebaker/scss-syntax.vim'
+
+# Vue
+[[plugins]]
+repo = 'posva/vim-vue'
+
+# JSX
+[[plugins]]
+repo = 'pangloss/vim-javascript'
+repo = 'mxw/vim-jsx'
 
 # Perl
 [[plugins]]
