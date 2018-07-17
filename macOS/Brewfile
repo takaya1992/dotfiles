@@ -17,7 +17,6 @@ brew 'tmux'
 brew 'peco'
 
 # for nokogiri
-tap 'homebrew/dupes'
 brew 'libxml2'
 brew 'libxslt'
 brew 'libiconv'
