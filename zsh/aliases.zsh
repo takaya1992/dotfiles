@@ -1,5 +1,5 @@
 alias cdu='cd-gitroot'
-alias ll="ls -la"
+alias ll="ls -lah"
 
 
 # correct
