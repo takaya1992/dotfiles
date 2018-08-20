@@ -57,7 +57,7 @@ if has zsh; then
   if [ -e "$HOME/.zplug" ]; then
     :
   else
-    curl -sL --proto-redir -all,https https://zplug.sh/installer | zsh
+    curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
   fi
   symlink "$dotfiles/zsh/.zprofile" "$HOME/.zprofile"
   symlink "$dotfiles/zsh/.zshenv" "$HOME/.zshenv"
