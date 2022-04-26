@@ -1,7 +1,7 @@
 # Installation
 
 ```
-$ curl -sL https://raw.githubusercontent.com/takaya1992/dotfiles/master/install.sh | sh
+$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/takaya1992/dotfiles/master/install.sh)"
 ```
 
 ## use zsh
