@@ -47,7 +47,7 @@ if is_mac; then
   if has brew; then
     :
   else
-    /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   fi
   brew tap Homebrew/bundle && brew bundle --file="$brewfile"
 fi
