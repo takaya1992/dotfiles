@@ -29,4 +29,4 @@ brew 'universal-ctags', args: ['HEAD']
 brew 'vim'
 
 tap 'sanemat/font'
-brew 'ricty', args: ['powerline']
+brew 'ricty', args: ['with-powerline']
