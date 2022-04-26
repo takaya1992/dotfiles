@@ -22,12 +22,11 @@ brew 'libxml2'
 brew 'libxslt'
 brew 'libiconv'
 
-# vim
 tap 'universal-ctags/universal-ctags'
 brew 'universal-ctags', args: ['HEAD']
-tap 'splhack/splhack'
-brew 'cmigemo-mk', args: ['HEAD']
-brew 'macvim-kaoriya', args: ['HEAD']
+
+# vim
+brew 'vim'
 
 tap 'sanemat/font'
-brew 'ricty', args: ['powerline', 'vim-powerline']
+brew 'ricty', args: ['powerline']
