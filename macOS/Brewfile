@@ -1,6 +1,3 @@
-# Install zsh
-brew 'zsh'
-
 brew 'wget'
 brew 'openssl'
 brew 'git'
@@ -13,14 +10,8 @@ brew 'rbenv'
 brew 'goenv'
 brew 'readline'
 brew 'ag'
-brew 'pt'
 brew 'tmux'
 brew 'peco'
-
-# for nokogiri
-brew 'libxml2'
-brew 'libxslt'
-brew 'libiconv'
 
 brew 'universal-ctags', args: ['HEAD']
 
