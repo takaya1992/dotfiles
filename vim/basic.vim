@@ -17,6 +17,7 @@ filetype plugin on
 scriptencoding utf-8
 set encoding=utf-8
 
+set backspace=indent,eol,start
 
 " カラースキームの設定
 set t_Co=256
@@ -25,3 +26,10 @@ let g:solarized_visibility = "high"
 let g:solarized_contrast = "high"
 let g:solarized_termtrans=1
 colorscheme solarized
+
+syntax enable
+
+if has('persistent_undo')
+  set undodir=~/dotfiles/vim/undo
+  set undofile
+endif
