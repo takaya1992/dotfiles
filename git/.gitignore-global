@@ -129,3 +129,9 @@ com_crashlytics_export_strings.xml
 
 # dotenv
 .env
+
++# editor
++.vimrc.local
++
++# TypeScript
++tsconfig.tsbuildinfo
