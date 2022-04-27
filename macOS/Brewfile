@@ -22,7 +22,6 @@ brew 'libxml2'
 brew 'libxslt'
 brew 'libiconv'
 
-tap 'universal-ctags/universal-ctags'
 brew 'universal-ctags', args: ['HEAD']
 
 # vim
