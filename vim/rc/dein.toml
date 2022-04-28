@@ -23,8 +23,7 @@ repo = 'vim-scripts/errormarker.vim'
 
 # ファイル検索
 [[plugins]]
-repo = 'kien/ctrlp.vim'
-
+repo = 'ctrlpvim/ctrlp.vim'
 
 # ローカル設定読み込み
 [[plugins]]
@@ -68,3 +67,29 @@ repo = 'moznion/vim-cpanfile'
 repo = 'moznion/syntastic-cpanfile'
 [[plugins]]
 repo = 'y-uuki/perl-local-lib-path.vim'
+
+[[plugins]]
+repo = 'roxma/nvim-yarp'
+
+[[plugins]]
+repo = 'roxma/vim-hug-neovim-rpc'
+
+[[plugins]]
+repo = 'Shougo/deoplete.nvim'
+depends = [ 'roxma/nvim-yarp', 'roxma/vim-hug-neovim-rpc' ]
+on_i = 1
+hook_source = '''
+let g:deoplete#enable_at_startup = 1
+'''
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
+repo = 'prabirshrestha/vim-lsp'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
