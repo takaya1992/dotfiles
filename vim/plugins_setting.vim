@@ -18,8 +18,8 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 
 
 " ctrlp
-let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:9'
-
+let g:ctrlp_match_window = 'bottom,order:btt,min:1,max:15,results:15'
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 
 
 
