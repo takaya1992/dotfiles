@@ -78,9 +78,4 @@ fi
 # vim
 if has vim; then
   symlink "$dotfiles/vim/.vimrc" "$HOME/.vimrc"
-
-  if has pip3; then
-      # deoplete 用
-      pip3 install pynvim
-  fi
 fi
