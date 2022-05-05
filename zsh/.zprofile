@@ -1,4 +1,4 @@
-type brew > /dev/null 2>&1 && eval "$(/opt/homebrew/bin/brew shellenv)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 type plenv > /dev/null 2>&1 && eval "$(plenv init -)"
 type rbenv > /dev/null 2>&1 && eval "$(rbenv init -)"
