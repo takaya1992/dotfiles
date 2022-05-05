@@ -82,3 +82,6 @@ repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc.vim'
