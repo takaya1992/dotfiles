@@ -98,3 +98,6 @@ repo = 'Shougo/ddc-sorter_rank'
 [[plugins]]
 repo = 'shun/ddc-vim-lsp'
 
+[[plugins]]
+repo = 'matsui54/denops-popup-preview.vim'
+
