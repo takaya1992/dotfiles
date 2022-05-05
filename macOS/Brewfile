@@ -19,5 +19,8 @@ brew 'universal-ctags', args: ['HEAD']
 # vim
 brew 'vim'
 
+# for ddc.vim
+brew 'deno'
+
 tap 'sanemat/font'
 brew 'ricty', args: ['with-powerline']
