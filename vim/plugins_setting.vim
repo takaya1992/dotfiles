@@ -45,3 +45,6 @@ nnoremap <silent> ,vb :Unite build<CR>
 nnoremap <silent> ,vcb :Unite build:!<CR>
 nnoremap <silent> ,vch :UniteBuildClearHighlight<CR>
 "" }}}
+
+call signature_help#enable()
+let g:lsp_signature_help_enabled = 0
