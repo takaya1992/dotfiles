@@ -1,11 +1,7 @@
 [[plugins]]
 repo = 'Shougo/vimproc.vim'
 build = 'make'
-on_source = ['unite.vim', 'vimshell.vim']
-
-[[plugins]]
-repo = 'Shougo/neocomplete.vim'
-depends = 'context_filetype.vim'
+on_source = ['vimshell.vim']
 
 # Nerdtreeでタブで開くときにタイトルをNerdTreeにしないやつ
 [[plugins]]
