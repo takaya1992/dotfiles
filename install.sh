@@ -73,6 +73,47 @@ fi
 if has git; then
   symlink "$dotfiles/git/.gitignore-global" "$HOME/.gitignore-global"
   symlink "$dotfiles/git/.gitconfig" "$HOME/.gitconfig"
+
+  GIT_CONFIG_FILE="$HOME/.gitconfig.local"
+  
+  if [ -e $GIT_CONFIG_FILE ]; then
+    :
+  else
+    touch $GIT_CONFIG_FILE
+  fi
+  
+  HAS_USER_SECTION=0
+  HAS_USERNAME=0
+  HAS_EMAIL=0
+  
+  if grep -e "^\[user\]$" $GIT_CONFIG_FILE > /dev/null; then
+    HAS_USER_SECTION=1
+  fi
+  if grep -e "name\s*=\s*\S\+$" $GIT_CONFIG_FILE > /dev/null; then
+    HAS_USERNAME=1
+  fi
+  if grep -e "email\s*=\s*\S\+$" $GIT_CONFIG_FILE > /dev/null; then
+    HAS_EMAIL=1
+  fi
+  
+  # すべてなかったら書き込み
+  if [ $HAS_USER_SECTION -eq 0 ] && [ $HAS_USERNAME -eq 0 ] && [ $HAS_EMAIL -eq 0 ]; then
+    echo "GIT USERNAME: "
+    read name
+    echo "GIT EMAIL: "
+    read email
+  
+    echo "[user]" >> $GIT_CONFIG_FILE
+    echo "    name = $name" >> $GIT_CONFIG_FILE
+    echo "    email = $email" >> $GIT_CONFIG_FILE
+  else
+    if [ $HAS_USER_SECTION -eq 1 ] && [ $HAS_USERNAME -eq 1 ] && [ $HAS_EMAIL -eq 1 ]; then
+      # すべてあれば何もしない
+      :
+    else
+      echo "git の user 設定に誤りがあるかもしれないです : $GIT_CONFIG_FILE"
+    fi
+  fi
 fi
 
 # vim
