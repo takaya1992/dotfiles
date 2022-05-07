@@ -16,6 +16,7 @@
   # 行ごとの差分じゃなくて，単語レベルでの差分を色付きで表示する
   difff = diff --word-diff
   co = checkout
+  cop = !"git branch --sort=-authordate | grep -v -e '->' | sed -e 's+remotes/[^/]*/++g' | peco | xargs git checkout"
     cob = checkout -b
     cp = cherry-pick
 [include]
