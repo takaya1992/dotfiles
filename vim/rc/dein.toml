@@ -72,6 +72,9 @@ repo = 'y-uuki/perl-local-lib-path.vim'
 repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
+repo = 'w0rp/ale'
+
+[[plugins]]
 repo = 'prabirshrestha/vim-lsp'
 
 [[plugins]]
