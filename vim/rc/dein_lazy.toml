@@ -1,8 +1,3 @@
-[[plugins]]
-repo = 'Shougo/vimproc.vim'
-build = 'make'
-on_source = ['vimshell.vim']
-
 # Nerdtreeでタブで開くときにタイトルをNerdTreeにしないやつ
 [[plugins]]
 repo = 'jistr/vim-nerdtree-tabs'
@@ -10,3 +5,6 @@ repo = 'jistr/vim-nerdtree-tabs'
 [[plugins]]
 repo = 'Vimjas/vim-python-pep8-indent'
 on_ft = 'python'
+
+[[plugins]]
+repo = 'thinca/vim-quickrun'

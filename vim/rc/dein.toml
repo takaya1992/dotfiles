@@ -16,10 +16,18 @@ repo = 'cocopon/iceberg.vim'
 repo = 'altercation/vim-colors-solarized'
 
 [[plugins]]
+repo = 'powerman/vim-plugin-AnsiEsc'
+
+[[plugins]]
 repo = 'scrooloose/syntastic'
 
 [[plugins]]
 repo = 'vim-scripts/errormarker.vim'
+
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+build = 'make'
+on_source = ['vimshell.vim']
 
 # ファイル検索
 [[plugins]]

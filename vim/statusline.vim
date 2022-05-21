@@ -3,7 +3,7 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-      \   'right': [ [ 'syntastic'], [ 'fileformat', 'fileencoding', 'filetype' ] ]
+      \   'right': [ [ 'fileformat', 'fileencoding', 'filetype', 'lineinfo' ], [ 'syntastic', 'quickrun'] ],
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
@@ -13,12 +13,15 @@ let g:lightline = {
       \   'fileencoding': 'MyFileencoding',
       \   'mode': 'MyMode',
       \   'ctrlpmark': 'CtrlPMark',
+      \   'quickrun': 'LightlineQuickrunRunnning',
       \ },
       \ 'component_expand': {
       \   'syntastic': 'SyntasticStatuslineFlag',
+      \   'quickrun':  'LightlineQuickrunRunnning',
       \ },
       \ 'component_type': {
       \   'syntastic': 'error',
+      \   'quickrun':  'quickrun',
       \ },
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
@@ -77,6 +80,7 @@ function! MyMode()
     \ fname == '__Gundo_Preview__' ? 'Gundo Preview' :
     \ fname =~ 'NERD_tree' ? 'NERDTree' :
     \ fname =~ '__Tag_List__' ? 'TagList' :
+    \ fname == 'quickrun_output' ? 'QuickRun' :
     \ &ft == 'unite' ? 'Unite' :
     \ &ft == 'vimfiler' ? 'VimFiler' :
     \ &ft == 'vimshell' ? 'VimShell' :
@@ -124,6 +128,10 @@ augroup END
 function! s:syntastic()
   SyntasticCheck
   call lightline#update()
+endfunction
+
+function! LightlineQuickrunRunnning() abort
+  return g:quickrun_running_message
 endfunction
 
 let g:unite_force_overwrite_statusline = 0
