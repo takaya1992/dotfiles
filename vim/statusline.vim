@@ -3,7 +3,7 @@ let g:lightline = {
       \ 'colorscheme': 'wombat',
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ], ['ctrlpmark'] ],
-      \   'right': [ [ 'fileformat', 'fileencoding', 'filetype', 'lineinfo' ], [ 'syntastic', 'quickrun'] ],
+      \   'right': [ [ 'syntastic' ], [ 'quickrun' ], [ 'fileformat', 'fileencoding', 'filetype', 'lineinfo' ] ],
       \ },
       \ 'component_function': {
       \   'fugitive': 'MyFugitive',
@@ -21,7 +21,7 @@ let g:lightline = {
       \ },
       \ 'component_type': {
       \   'syntastic': 'error',
-      \   'quickrun':  'quickrun',
+      \   'quickrun':  'warning',
       \ },
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
