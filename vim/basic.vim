@@ -23,7 +23,9 @@ set backspace=indent,eol,start
 set t_Co=256
 set background=dark
 let g:solarized_visibility = "high"
-let g:solarized_contrast = "high"
+" コマンドライン補完時、ステータスバーへ候補が表示されて現在選択されているものが強調されるけど
+" 高コントラストモードだとどれが強調されているか分からなくなってしまうためオフにする
+" let g:solarized_contrast = "high"
 let g:solarized_termtrans=1
 colorscheme solarized
 
@@ -33,3 +35,5 @@ if has('persistent_undo')
   set undodir=~/dotfiles/vim/undo
   set undofile
 endif
+
+set wildmenu wildmode=longest:full,full
