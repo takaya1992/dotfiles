@@ -92,6 +92,8 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer> [g <Plug>(lsp-previous-diagnostic)
   nmap <buffer> ]g <Plug>(lsp-next-diagnostic)
   nmap <buffer> K <plug>(lsp-hover)
+  nnoremap <buffer> <expr><c-f> lsp#scroll(+1)
+  nnoremap <buffer> <expr><c-d> lsp#scroll(-1)
 endfunction
 
 augroup lsp_install
@@ -99,4 +101,29 @@ augroup lsp_install
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
 
+let g:lsp_diagnostics_enabled = 1
+let g:lsp_diagnostics_echo_cursor = 1
+" let g:asyncomplete_auto_popup = 1
+" let g:asyncomplete_auto_completeopt = 0
+let g:asyncomplete_popup_delay = 200
+let g:lsp_text_edit_enabled = 1
+let g:lsp_preview_float = 1
+let g:lsp_diagnostics_float_cursor = 1
 let g:lsp_settings_filetype_go = ['gopls', 'golangci-lint-langserver']
+let g:lsp_settings = {}
+let g:lsp_settings = {
+\  'gopls': {
+\    'initialization_options': {
+\      'usePlaceholders': v:true,
+\      'analyses': {
+\        'fillstruct': v:true,
+\      },
+\      'hoverKind': 'SynopsisDocumentation',
+\      'completionDocumentation': v:true,
+\      'linkTarget': 'pkg.go.dev',
+\      'staticcheck': v:true,
+\      'completeUnimported': v:true,
+\    },
+\    'allowlist': ['go', 'gomod', 'gohtmltmpl', 'gotexttmpl', 'go.test'],
+\  },
+\}

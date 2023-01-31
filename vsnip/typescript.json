@@ -1,0 +1,14 @@
+{
+  "ReactFC": {
+    "prefix": "fc",
+    "body": [
+      "import React from 'react';\n",
+      "const $1: React.FC = () => {",
+      "  return (",
+      "  );",
+      "};\n",
+      "export default $1;"
+    ],
+    "description": "React関数コンポーネントの雛形"
+  }
+}

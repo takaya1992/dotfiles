@@ -112,3 +112,11 @@ repo = 'matsui54/denops-popup-preview.vim'
 [[plugins]]
 repo = 'matsui54/denops-signature_help'
 
+[[plugins]]
+repo = 'wuelnerdotexe/vim-astro'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'

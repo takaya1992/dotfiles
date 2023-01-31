@@ -1,14 +1,17 @@
-call ddc#custom#patch_global('sources', ['vim-lsp', 'around'])
+call ddc#custom#patch_global('sources', ['vim-lsp', 'vsnip', 'around'])
 call ddc#custom#patch_global('sourceOptions', {
       \ 'vim-lsp': {
       \   'matchers': ['matcher_head'],
       \   'mark': 'LSP',
       \   'forceCompletionPattern': '\\.|:|->',
       \ },
+      \ 'vsnip': {'mark': 'vsnip'},
       \ 'around': {'mark': 'A'},
       \ '_': {
       \   'matchers': ['matcher_head'],
       \   'sorters': ['sorter_rank']},
+      \   'minAutoCompleteLength': 1,
+      \   'forceCompletionPattern': '\\.|:|->',
       \ })
 call ddc#enable()
 

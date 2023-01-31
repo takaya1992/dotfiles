@@ -48,3 +48,24 @@ nnoremap <silent> ,vch :UniteBuildClearHighlight<CR>
 
 call signature_help#enable()
 let g:lsp_signature_help_enabled = 0
+
+let g:astro_typescript = 'enable'
+
+" Expand
+imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
+
+" Select or cut text to use as $TM_SELECTED_TEXT in the next snippet.
+" See https://github.com/hrsh7th/vim-vsnip/pull/50
+nmap        s   <Plug>(vsnip-select-text)
+xmap        s   <Plug>(vsnip-select-text)
+nmap        S   <Plug>(vsnip-cut-text)
+xmap        S   <Plug>(vsnip-cut-text)
+
+" If you want to use snippet for multiple filetypes, you can `g:vsnip_filetypes` for it.
+let g:vsnip_filetypes = {}
+let g:vsnip_filetypes.javascriptreact = ['javascript']
+let g:vsnip_filetypes.typescriptreact = ['typescript']
+let g:vsnip_filetypes['perl.unit'] = ['perl']
+
+let g:vsnip_snippet_dirs = [expand($HOME . '/dotfiles/vsnip'), expand($HOME . '/dotfiles/local-vsnip')]
