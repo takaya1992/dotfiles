@@ -104,6 +104,9 @@ repo = 'Shougo/ddc-matcher_head'
 repo = 'Shougo/ddc-sorter_rank'
 
 [[plugins]]
+repo = 'matsui54/ddc-dictionary'
+
+[[plugins]]
 repo = 'shun/ddc-vim-lsp'
 
 [[plugins]]

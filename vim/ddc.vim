@@ -1,4 +1,14 @@
-call ddc#custom#patch_global('sources', ['vim-lsp', 'vsnip', 'around'])
+call ddc#custom#patch_global('sourceParams', {
+      \   'dictionary': {
+      \     'dictPaths': [
+      \       './.dict',
+      \     ],
+      \     'smartCase': v:true,
+      \     'isVolatile': v:true,
+      \   }
+      \ })
+
+call ddc#custom#patch_global('sources', ['vim-lsp', 'vsnip', 'around', 'dictionary'])
 call ddc#custom#patch_global('sourceOptions', {
       \ 'vim-lsp': {
       \   'matchers': ['matcher_head'],
@@ -7,6 +17,7 @@ call ddc#custom#patch_global('sourceOptions', {
       \ },
       \ 'vsnip': {'mark': 'vsnip'},
       \ 'around': {'mark': 'A'},
+      \ 'dictionary': {'mark': 'D'},
       \ '_': {
       \   'matchers': ['matcher_head'],
       \   'sorters': ['sorter_rank']},
