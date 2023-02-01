@@ -126,4 +126,7 @@ let g:lsp_settings = {
 \    },
 \    'allowlist': ['go', 'gomod', 'gohtmltmpl', 'gotexttmpl', 'go.test'],
 \  },
+\  'pls': {
+\      'inc': ['./lib'],
+\  },
 \}
