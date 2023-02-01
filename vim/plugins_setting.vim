@@ -68,4 +68,4 @@ let g:vsnip_filetypes.javascriptreact = ['javascript']
 let g:vsnip_filetypes.typescriptreact = ['typescript']
 let g:vsnip_filetypes['perl.unit'] = ['perl']
 
-let g:vsnip_snippet_dirs = [expand($HOME . '/dotfiles/vsnip'), expand($HOME . '/dotfiles/local-vsnip')]
+let g:vsnip_snippet_dirs = [expand($HOME . '/dotfiles/vsnip'), expand($HOME . '/dotfiles/vsnip-local')]
