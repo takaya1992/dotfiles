@@ -21,3 +21,5 @@
     cp = cherry-pick
 [include]
   path = ~/.gitconfig.local
+[init]
+	defaultBranch = main
