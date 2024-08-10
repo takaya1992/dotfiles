@@ -44,6 +44,40 @@ fi
 
 # package install
 if is_mac; then
+  # Dock に起動中のアプリしか表示しない
+  defaults write com.apple.dock static-only -bool true; killall Dock
+
+  # スクロールバーの表示: 常に表示
+  defaults write -g AppleShowScrollBars -string "Always"
+
+  # ウィンドウタイトルバーのダブルクリックで「拡大/縮小」
+  defaults write -g AppleActionOnDoubleClick -string "Maximize"
+
+  # 起動中のアプリケーションをアニメーションで表示
+  defaults write com.apple.dock launchanim -bool true
+
+  # Dockを自動的に表示/非表示
+  defaults write com.apple.dock "autohide" -bool "true" && killall Dock
+
+  # 起動済みのアプリケーションにインジケータを表示
+  defaults write com.apple.dock "show-process-indicators" -bool "true" && killall Dock
+
+  # キーリピート
+  defaults write -g KeyRepeat -int 2
+
+  # リピート入力認識までの時間
+  defaults write -g InitialKeyRepeat -int 35 
+
+  # スクショ保存先
+  mkdir -p ~/Pictures/screenshots/
+  defaults write com.apple.screencapture location ~/Pictures/screenshots/
+
+  # Finder:隠しファイル/フォルダを表示
+  defaults write com.apple.finder AppleShowAllFiles true
+
+  # Finder:拡張子を表示
+  defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
   if has brew; then
     :
   else
