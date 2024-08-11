@@ -87,17 +87,17 @@ if is_mac; then
 
   defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
 
-  # Safari ですべてのURLを表示する
-  defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true"
-
   defaults write com.apple.TextEdit "RichText" -bool "false"
 
   defaults write com.apple.TextEdit "SmartQuotes" -bool "false"
+
+  sudo softwareupdate --install-rosetta
 
   if has brew; then
     :
   else
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
   brew tap Homebrew/bundle && brew bundle --file="$brewfile"
 fi
