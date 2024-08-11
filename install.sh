@@ -72,11 +72,27 @@ if is_mac; then
   mkdir -p ~/Pictures/screenshots/
   defaults write com.apple.screencapture location ~/Pictures/screenshots/
 
+  defaults write com.apple.screencapture "show-thumbnail" -bool "false"
+
   # Finder:隠しファイル/フォルダを表示
   defaults write com.apple.finder AppleShowAllFiles true
 
   # Finder:拡張子を表示
   defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+
+  # Finder:デフォルトの検索範囲を現在のディレクトリにする
+  defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf" && killall Finder
+
+  defaults write com.apple.finder "ShowPathbar" -bool "true" && killall Finder
+
+  defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
+
+  # Safari ですべてのURLを表示する
+  defaults write com.apple.Safari "ShowFullURLInSmartSearchField" -bool "true"
+
+  defaults write com.apple.TextEdit "RichText" -bool "false"
+
+  defaults write com.apple.TextEdit "SmartQuotes" -bool "false"
 
   if has brew; then
     :

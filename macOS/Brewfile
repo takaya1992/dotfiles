@@ -1,5 +1,3 @@
-tap 'homebrew/cask'
-
 brew 'wget'
 brew 'openssl'
 brew 'git'
@@ -23,7 +21,7 @@ brew 'peco'
 brew 'mas'
 
 tap 'fujiwara/tap'
-brew 'lambroll'
+brew 'fujiwara/tap/lambroll'
 
 brew 'universal-ctags', args: ['HEAD']
 
