@@ -1,26 +1,54 @@
+tap 'homebrew/cask'
+
 brew 'wget'
 brew 'openssl'
 brew 'git'
 brew 'git-flow'
+brew 'git-secrets'
+brew 'gh'
 brew 'tig'
+brew 'grep'
+brew 'gnu-sed'
 brew 'tree'
 brew 'jq'
 brew 'plenv'
 brew 'rbenv'
 brew 'goenv'
+brew 'node-build'
 brew 'nodenv'
 brew 'readline'
 brew 'ag'
 brew 'tmux'
 brew 'peco'
+brew 'mas'
+
+tap 'fujiwara/tap'
+brew 'lambroll'
 
 brew 'universal-ctags', args: ['HEAD']
 
+brew 'tfenv'
+brew 'terraform-docs'
+brew 'tflint'
+
 # vim
-brew 'vim'
+brew 'neovim'
 
 # for ddc.vim
 brew 'deno'
 
-tap 'sanemat/font'
-brew 'ricty', args: ['with-powerline']
+# font
+cask 'font-hackgen'
+cask 'font-hackgen-nerd'
+
+# applications
+cask '1password'
+cask 'google-chrome'
+cask 'firefox'
+cask 'google-japanese-ime'
+cask 'dropbox'
+cask 'docker'
+cask 'karabiner-elements'
+cask 'meetingbar'
+cask 'notion'
+cask 'cleanshot'
