@@ -122,4 +122,4 @@ repo = 'wuelnerdotexe/vim-astro'
 repo = 'hrsh7th/vim-vsnip'
 
 [[plugins]]
-repo = 'hrsh7th/vim-vsnip-integ'
+repo = 'uga-rosa/ddc-source-vsnip'
