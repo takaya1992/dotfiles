@@ -45,7 +45,7 @@ fi
 # package install
 if is_mac; then
   # Dock に起動中のアプリしか表示しない
-  defaults write com.apple.dock static-only -bool true; killall Dock
+  defaults write com.apple.dock static-only -bool true;
 
   # スクロールバーの表示: 常に表示
   defaults write -g AppleShowScrollBars -string "Always"
@@ -57,10 +57,10 @@ if is_mac; then
   defaults write com.apple.dock launchanim -bool true
 
   # Dockを自動的に表示/非表示
-  defaults write com.apple.dock "autohide" -bool "true" && killall Dock
+  defaults write com.apple.dock "autohide" -bool "true"
 
   # 起動済みのアプリケーションにインジケータを表示
-  defaults write com.apple.dock "show-process-indicators" -bool "true" && killall Dock
+  defaults write com.apple.dock "show-process-indicators" -bool "true"
 
   # キーリピート
   defaults write -g KeyRepeat -int 2
@@ -81,15 +81,18 @@ if is_mac; then
   defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
   # Finder:デフォルトの検索範囲を現在のディレクトリにする
-  defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf" && killall Finder
+  defaults write com.apple.finder "FXDefaultSearchScope" -string "SCcf"
 
-  defaults write com.apple.finder "ShowPathbar" -bool "true" && killall Finder
+  defaults write com.apple.finder "ShowPathbar" -bool "true"
 
   defaults write com.apple.menuextra.clock "DateFormat" -string "\"EEE d MMM HH:mm:ss\""
 
   defaults write com.apple.TextEdit "RichText" -bool "false"
 
   defaults write com.apple.TextEdit "SmartQuotes" -bool "false"
+
+  killall Dock
+  killall Finder
 
   sudo softwareupdate --install-rosetta
 
