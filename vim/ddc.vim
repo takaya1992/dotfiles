@@ -1,10 +1,11 @@
 call ddc#custom#patch_global('sourceParams', {
       \   'dictionary': {
       \     'dictPaths': [
-      \       './.dict',
+      \       $HOME . '/dotfiles/dict/words.txt',
+      \       $HOME . '/dotfiles/dict/words-local.txt',
       \     ],
       \     'smartCase': v:true,
-      \     'isVolatile': v:true,
+      \     'showMenu': v:false,
       \   }
       \ })
 
@@ -17,13 +18,18 @@ call ddc#custom#patch_global('sourceOptions', {
       \ },
       \ 'vsnip': {'mark': 'vsnip'},
       \ 'around': {'mark': 'A'},
-      \ 'dictionary': {'mark': 'D'},
+      \ 'dictionary': {
+      \   'mark': 'Dict',
+      \ },
       \ '_': {
       \   'matchers': ['matcher_head'],
-      \   'sorters': ['sorter_rank']},
+      \   'sorters': ['sorter_rank'],
       \   'minAutoCompleteLength': 1,
       \   'forceCompletionPattern': '\\.|:|->',
-      \ })
+      \ }})
+
+call ddc#custom#patch_global('ui', 'native')
+
 call ddc#enable()
 
 call popup_preview#enable()

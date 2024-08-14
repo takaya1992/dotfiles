@@ -2,8 +2,10 @@
 
 zplug "mollifier/cd-gitroot"
 zplug "b4b4r07/enhancd", use:init.sh
-zplug "zsh-users/zsh-history-substring-search"
+zplug "zsh-users/zsh-history-substring-search", as:plugin
 zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions", defer:2
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
 
 
 # Install plugins if there are plugins that have not been installed

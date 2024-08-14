@@ -259,3 +259,6 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
