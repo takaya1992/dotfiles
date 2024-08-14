@@ -172,4 +172,5 @@ fi
 # vim
 if has vim; then
   symlink "$dotfiles/vim/.vimrc" "$HOME/.vimrc"
+  touch $dotfiles/dict/words-local.txt
 fi
