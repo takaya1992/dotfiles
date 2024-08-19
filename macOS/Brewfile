@@ -19,6 +19,7 @@ brew 'ag'
 brew 'tmux'
 brew 'peco'
 brew 'mas'
+brew 'awscli'
 
 tap 'fujiwara/tap'
 brew 'fujiwara/tap/lambroll'
