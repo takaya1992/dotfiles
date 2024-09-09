@@ -126,3 +126,6 @@ repo = 'hrsh7th/vim-vsnip'
 
 [[plugins]]
 repo = 'uga-rosa/ddc-source-vsnip'
+
+[[plugins]]
+repo = 'hashivim/vim-terraform'
