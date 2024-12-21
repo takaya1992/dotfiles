@@ -15,5 +15,29 @@
       "export default $1;"
     ],
     "description": "React関数コンポーネントの雛形"
+  },
+  "Storybook": {
+    "prefix": "storybook:file",
+    "body": [
+      "import type { Meta, StoryObj } from '@storybook/react';",
+      "",
+      "import $1 from './';",
+      "",
+      "",
+      "const meta: Meta<typeof $1> = {",
+      "  component: $1,",
+      "};",
+      "",
+      "export default meta;",
+      "",
+      "type Story = StoryObj<typeof $1>;",
+      "",
+      "",
+      "export const Default: Story = {",
+      "  args: {",
+      "  },",
+      "};"
+    ],
+    "description": "Storybookのファイルテンプレート"
   }
 }
