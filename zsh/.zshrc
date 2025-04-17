@@ -9,7 +9,7 @@ PATH=$HOME/bin:$PATH
 case "${OSTYPE}" in
 # macOS
 darwin*)
-    [ -f ~/dotfiles/zsh/osx.zsh ] && . ~/dotfiles/zsh/osx.zsh
+    [ -f ~/dotfiles/zsh/macos.zsh ] && . ~/dotfiles/zsh/macos.zsh
     ;;
 # Linux
 linux*)
