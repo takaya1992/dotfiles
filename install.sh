@@ -102,7 +102,7 @@ if is_mac; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
     eval "$(/opt/homebrew/bin/brew shellenv)"
   fi
-  brew tap Homebrew/bundle && brew bundle --file="$brewfile"
+  brew bundle --file="$brewfile"
 fi
 
 # zsh
